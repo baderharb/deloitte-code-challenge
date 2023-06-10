@@ -20,8 +20,7 @@ class SplashFragment : Fragment() {
     private val viewModel: SplashViewModel by viewModels()
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentSplashBinding.inflate(inflater, container, false)
         return binding.root
@@ -32,9 +31,7 @@ class SplashFragment : Fragment() {
 
         Handler(Looper.getMainLooper()).postDelayed({
             findNavController().navigate(R.id.action_splashFragment_to_authFragment)
-        }, 5000)
+        }, 3000)
         viewModel.getData()
-
     }
-
 }

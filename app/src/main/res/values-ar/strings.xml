@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Deloitte Code Challenge</string>
+    <string name="item_navigation_menu_dashboard">لوحة القيادة</string>
+    <string name="item_navigation_menu_more">المزيد</string>
+    <string name="email_auth">رقم الجوال</string>
+    <string name="full_name_auth">الاسم الكامل</string>
+    <string name="hint_full_name_auth">يارا الجمل</string>
+    <string name="log_in_auth">تسجيل الدخول</string>
+    <string name="password_auth">كلمة المرور</string>
+    <string name="register_auth">تسجيل الدخول</string>
+    <string name="national_id_auth">الرقم الوطني</string>
+    <string name="mobile_number_auth">رقم الهاتف</string>
+</resources>

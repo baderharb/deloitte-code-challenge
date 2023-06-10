@@ -1,5 +1,15 @@
 <resources>
     <string name="app_name">Deloitte Code Challenge</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="item_navigation_menu_dashboard">Dashboard</string>
+    <string name="item_navigation_menu_more">More</string>
+    <string name="email_auth">Email</string>
+    <string name="full_name_auth">Full Name</string>
+    <string name="hint_full_name_auth">Yarah Al Jamal</string>
+    <string name="log_in_auth">Log In</string>
+    <string name="password_auth">Password</string>
+    <string name="register_auth">Register</string>
+    <string name="national_id_auth">National ID</string>
+    <string name="mobile_number_auth">Mobile Number</string>
+    <string name="search">Search</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.deloittecodechallenge
+package com.example.deloittecodechallenge.utils
 
 import android.app.Activity
 import android.content.Context
