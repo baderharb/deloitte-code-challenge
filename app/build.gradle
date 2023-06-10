@@ -46,6 +46,7 @@ dependencies {
     def nav_version = "2.5.3"
     def coroutines_version = "1.6.4"
     def hilt_version = "2.46"
+    def room_version = "2.5.1"
 
     implementation 'androidx.core:core-ktx:1.8.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -81,6 +82,11 @@ dependencies {
 
     // lottie
     implementation 'com.airbnb.android:lottie:5.2.0'
+
+    // Room
+    implementation 'androidx.room:room-ktx:2.5.1'
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
 
 }
 

@@ -1,4 +1,4 @@
-package com.example.deloittecodechallenge.ui.main
+package com.example.deloittecodechallenge.ui.main.more
 
 import android.os.Bundle
 import android.view.LayoutInflater
