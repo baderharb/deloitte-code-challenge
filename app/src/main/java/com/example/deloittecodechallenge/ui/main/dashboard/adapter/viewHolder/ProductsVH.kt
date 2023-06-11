@@ -1,4 +1,4 @@
-package com.example.deloittecodechallenge.ui.main.dashboard
+package com.example.deloittecodechallenge.ui.main.dashboard.adapter.viewHolder
 
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide

@@ -11,5 +11,4 @@ interface ApiEndpoints {
     suspend fun fetchProducts(
         @Query("api-key") apikey: String
     ): Response<ProductResponse>
-
 }

@@ -5,11 +5,30 @@ package com.example.deloittecodechallenge.utils
 import android.text.Editable
 import android.text.InputFilter
 import android.text.TextWatcher
+import android.view.View
 import android.widget.*
 import androidx.appcompat.widget.AppCompatButton
 import androidx.core.content.ContextCompat
 import com.example.deloittecodechallenge.R
 import com.google.android.material.textfield.TextInputEditText
+
+fun View.show() {
+    post {
+        if (!isVisible())
+            visibility = View.VISIBLE
+    }
+}
+
+fun View.hide() {
+    post {
+        if (isVisible())
+            visibility = View.GONE
+    }
+}
+
+fun View?.isVisible(): Boolean {
+    return this?.visibility == View.VISIBLE
+}
 
 fun AppCompatButton.enableButton() {
     post {

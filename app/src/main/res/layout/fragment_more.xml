@@ -1,147 +1,280 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+<layout>
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/userImg"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+    <data>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/fullNameText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:textSize="20sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/userImg"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="title" />
+        <import type="android.view.View" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/emailText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/userImg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/userImg"
-        tools:text="1 day ago" />
+        <variable
+            name="getCurrentLanguage"
+            type="String" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/detailsText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Details"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userImg" />
+        <variable
+            name="fullName"
+            type="String" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/nationalIdText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/national_id_auth"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/detailsText" />
+        <variable
+            name="email"
+            type="String" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/nationalIdTextValue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nationalIdText"
-        tools:text="1294719872189" />
+        <variable
+            name="nationalId"
+            type="String" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/phoneNumberText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/mobile_number_auth"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/nationalIdTextValue" />
+        <variable
+            name="phoneNumber"
+            type="String" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/phoneNumberTextValue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/phoneNumberText"
-        tools:text="00962837847847" />
+    </data>
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/dateOfBirthText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Date of Birth"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/phoneNumberTextValue" />
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:padding="16dp">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/dateOfBirthTextValue"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dateOfBirthText"
-        tools:text="DD-MM-YYYY" />
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/userImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/baseline_person_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/fullNameText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@{fullName}"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="@{fullName.isEmpty() ? View.GONE : View.VISIBLE}"
+            app:layout_constraintStart_toEndOf="@id/userImg"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="title" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/settingsText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Settings"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dateOfBirthTextValue" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/emailText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@{email}"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:visibility="@{email.isEmpty() ? View.GONE : View.VISIBLE}"
+            app:layout_constraintStart_toEndOf="@id/userImg"
+            app:layout_constraintTop_toBottomOf="@+id/fullNameText"
+            tools:text="1 day ago" />
 
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/detailsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/details"
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userImg" />
 
-    <View
-        android:id="@+id/viewSeparater"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="16dp"
-        android:background="@color/main"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/settingsText" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/nationalIdText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/national_id_auth"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="@{nationalId.isEmpty() ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detailsText" />
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/logoutText"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:text="Logout"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewSeparater" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/nationalIdTextValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{nationalId}"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:visibility="@{nationalId.isEmpty() ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nationalIdText"
+            tools:text="1294719872189" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/phoneNumberText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/mobile_number_auth"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:visibility="@{phoneNumber.isEmpty() ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nationalIdTextValue" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/phoneNumberTextValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@{phoneNumber}"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            android:visibility="@{phoneNumber.isEmpty() ? View.GONE : View.VISIBLE}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneNumberText"
+            tools:text="00962837847847" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dateOfBirthText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/date_of_birth"
+            android:textAlignment="textStart"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phoneNumberTextValue" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dateOfBirthTextValue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="27-08-1994"
+            android:textAlignment="textStart"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateOfBirthText" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/settingsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/settings"
+            android:textAlignment="textStart"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/dateOfBirthTextValue" />
+
+        <View
+            android:id="@+id/viewSeparater"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/main"
+            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_language"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/settingsText" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_language"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/constraint_layout_log_out"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/viewSeparater">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="0dp"
+                android:layout_height="58dp"
+                android:background="@drawable/shape_btn_corner_light_blue_grey_bg"
+                android:layoutDirection="ltr"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/radio_button_ar"
+                    android:layout_width="0dp"
+                    android:layout_height="51dp"
+                    android:layout_marginEnd="4dp"
+                    android:background='@{getCurrentLanguage.equals("ar") ? @drawable/background_selected_language : @drawable/background_un_selected_language}'
+                    android:drawableStart="@drawable/ic_flag_text_ar"
+                    android:gravity="center"
+                    android:paddingHorizontal="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/radio_button_en"
+                    android:layout_width="0dp"
+                    android:layout_height="51dp"
+                    android:layout_marginStart="4dp"
+                    android:background='@{getCurrentLanguage.equals("en") ? @drawable/background_selected_language : @drawable/background_un_selected_language}'
+                    android:drawableStart="@drawable/ic_flag_text_en"
+                    android:gravity="center"
+                    android:paddingHorizontal="50dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraint_layout_log_out"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/shape_btn_corner_light_blue_grey_bg"
+            android:paddingStart="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/constraint_layout_language"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_view_logout"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseline_logout_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp"
+                android:layout_marginStart="16dp"
+                android:layout_weight="1"
+                android:text="@string/log_out_more"
+                android:textColor="@color/main"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/image_view_logout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

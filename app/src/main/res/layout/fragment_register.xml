@@ -65,9 +65,10 @@
                     android:maxLength="55"
                     android:paddingTop="0dp"
                     android:paddingBottom="0dp"
+                    android:textAlignment="textStart"
                     android:textColor="@color/main"
                     android:textColorHint="@color/neutral_30"
-                    android:textDirection="ltr"
+                    android:textDirection="locale"
                     android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -110,9 +111,10 @@
                     android:maxLength="55"
                     android:paddingTop="0dp"
                     android:paddingBottom="0dp"
+                    android:textAlignment="textStart"
                     android:textColor="@color/main"
                     android:textColorHint="@color/neutral_30"
-                    android:textDirection="ltr"
+                    android:textDirection="locale"
                     android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -157,7 +159,7 @@
                     android:paddingBottom="0dp"
                     android:textColor="@color/main"
                     android:textColorHint="@color/neutral_30"
-                    android:textDirection="ltr"
+                    android:textDirection="locale"
                     android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -200,9 +202,10 @@
                     android:maxLength="10"
                     android:paddingTop="0dp"
                     android:paddingBottom="0dp"
+                    android:textAlignment="textStart"
                     android:textColor="@color/main"
                     android:textColorHint="@color/neutral_30"
-                    android:textDirection="ltr"
+                    android:textDirection="locale"
                     android:textSize="16sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -242,9 +245,9 @@
                     android:imeOptions="actionDone"
                     android:inputType="textPassword"
                     android:layoutDirection="locale"
+                    android:textAlignment="textStart"
                     android:paddingTop="0dp"
                     android:paddingBottom="0dp"
-                    android:textAlignment="viewStart"
                     android:textColor="@color/main"
                     android:textColorHint="@color/neutral_30"
                     android:textDirection="locale"

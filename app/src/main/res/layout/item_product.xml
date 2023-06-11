@@ -14,7 +14,9 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp">
+        android:layout_marginTop="4dp"
+        android:background="@color/white"
+        android:padding="8dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/productImg"
@@ -31,8 +33,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:ellipsize="end"
+            android:maxLines="4"
+            android:textAlignment="textStart"
             android:text="@{product.title}"
-            android:textSize="20sp"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/productDate"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/productImg"
             app:layout_constraintTop_toTopOf="parent"
@@ -43,10 +49,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_margin="8dp"
+            android:textAlignment="textStart"
             android:text="@{product.updated}"
             app:layout_constraintBottom_toBottomOf="@+id/productImg"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/productImg"
+            app:layout_constraintTop_toBottomOf="@+id/productTitle"
             tools:text="1 day ago" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

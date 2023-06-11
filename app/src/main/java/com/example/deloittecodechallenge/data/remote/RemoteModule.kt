@@ -57,5 +57,4 @@ object RemoteModule {
             .client(okHttpClient)
             .build()
     }
-
 }

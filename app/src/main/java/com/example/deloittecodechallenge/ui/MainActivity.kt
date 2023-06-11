@@ -1,5 +1,6 @@
 package com.example.deloittecodechallenge.ui
 
+import android.content.Context
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
@@ -9,7 +10,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.example.deloittecodechallenge.R
 import com.example.deloittecodechallenge.databinding.ActivityMainBinding
-import com.example.deloittecodechallenge.utils.ShowNavController
+import com.example.deloittecodechallenge.utils.Languages
+import com.example.deloittecodechallenge.utils.annotaion.ShowNavController
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -20,6 +22,10 @@ class MainActivity : AppCompatActivity() {
         (supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment)
     }
     private val navController by lazy { navHostFragment.navController }
+
+    override fun attachBaseContext(newBase: Context) {
+        super.attachBaseContext(Languages.setLocale(newBase))
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

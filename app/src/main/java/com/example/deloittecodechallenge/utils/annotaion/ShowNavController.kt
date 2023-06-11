@@ -1,4 +1,4 @@
-package com.example.deloittecodechallenge.utils
+package com.example.deloittecodechallenge.utils.annotaion
 
 @Target(AnnotationTarget.CLASS)
 @Retention(AnnotationRetention.RUNTIME)
